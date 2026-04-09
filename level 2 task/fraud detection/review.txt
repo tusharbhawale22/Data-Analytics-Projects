@@ -1,10 +1,31 @@
+Summary:
+
+Performed both logistic regression and and Random Forest Classifier using scikit-learn, made predictions on a test set, and plotted the confusion matrix for evaluation.
+
+Both models (Logistic Regression and Random Forest Classifier) performed exceptionally well, but Random Forest Classifier have achieved high F1-score when compared to Logistic Regression model for both the classes which makes it the best model.
+
+High precision score indicates that the model is good at identifying positive examples, where the target variable is 1.
+
+High recall score indicates that the model is good at identifying positive examples, where the target variable is 0.
+
+High f1 score is also showing that the model is good at identifying positive and negative examples.
+ROC-AUC curve and Precision-Recall curve are two methods to decide the proper threshold values. They are also used to explain the model goodness of fit.
+
+
 Conclusion
-The Wine Quality Prediction project successfully demonstrated the application of machine learning techniques in viticulture. Through meticulous data analysis and model evaluation, the Random Forest Classifier emerged as the most effective tool for predicting wine quality based on chemical attributes. The insights gained from feature importance and model performance not only aid in accurate predictions but also provide valuable information for wine producers aiming to enhance quality. Future work can build upon these findings to further refine predictive models and incorporate a broader range of influencing factors.
 
-The Random Forest model emerged as the best-performing classifier based on metrics such as accuracy and F1-score. This suggests that Random Forest's ensemble approach is particularly effective for predicting wine quality based on the chemical attributes provided.
+Both models are effective in handling the classification task with high accuracy and balanced performance across classes. Random Forest classifier outperform the Logistic Regression in distinguishing between classes.
 
-From feature importance, Alcohol and sulphates were shown to have the highest influence on quality, implying that these properties play a significant role in determining the wine's perceived quality.
+Data is highly imbalanced, so it needs to be undersampling or oversampling technique. I choose to do UnderSampling technique to balance the data.
 
-The confusion matrix analysis revealed that some quality levels were occasionally misclassified. This is likely due to the subtle differences in chemical composition that make it difficult to distinguish between adjacent quality levels.
+The models show balanced performance in correctly identifying instances of both classes (0 and 1), as indicated by the similarity in f1 score and recall values.
 
-Optimizing hyperparameters further enhanced the performance of each model, particularly improving the precision and recall scores of the Random Forest and SVC models.
+Precision for both classes are also high, suggesting a good balance between and recall. But Precision for Random Forest Classifier is more than compared to Precision of Logistic Regression.
+
+AUC-ROC is less sensitive to class imbalance than AUC-PR. In an imbalanced dataset, where one class is much more prevalent than the other, the ROC curve may look good even if the classifier is performing poorly on the minority class.
+
+Depending on the specific requirements of the problem (e.g., the importance of false positives vs. false negatives), you may choose one model over the other based on the balance between precision and recall.
+
+Consider the context of application and certain misclassifications which may tend to high cost than others when selecting a final model.
+
+Further analysis, such as feature importance or exploring additional evaluation metrics, could provide additional insights into the model's behavior and help in making a more informed decision.
