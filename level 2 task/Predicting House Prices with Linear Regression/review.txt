@@ -1,0 +1,7 @@
+Conclusion
+
+The linear regression model achieved an R-squared value of 0.65, indicating that approximately 65.29% of the variance in house prices is explained by the model. 
+
+However, the high Mean Squared Error (MSE) of 1,754,318,687,330.66 and Root Mean Squared Error (RMSE) of 1,324,506.96 suggest that the predictions have a significant average deviation from the actual prices. 
+
+While the model demonstrates moderate explanatory power, further refinement through feature engineering, data preprocessing, or using more advanced algorithms may be needed to improve predictive accuracy.
